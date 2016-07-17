@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rangeToArray</title>
+</head>
+<body>
+<script>
+    function rangeToArray (rangeStart, rangeStop, rangeStep){//обьявляем функцию ранжирования
+        var arr = new Array(); //создаем обьект массива
+        if(rangeStart<rangeStop){//условие если rangeStart<rangeStop
+        for (var i=rangeStart; i<=rangeStop; i=i+rangeStep){// проходимся в цикле и показываем по наростающей массив
+            arr.push(i);//добавляем все в массив наш результат работы кикла
+        }}
+        if(rangeStart>rangeStop){for ( i=rangeStart; i>=rangeStop; i=i-rangeStep){// условие если rangeStart>rangeStop циклим по убывающей
+            arr.push(i);//добавляем все в массив наш результат работы кикла
+        }}
+        return arr; //возвращаем результат работы функции
+    }
+    console.log(rangeToArray(2, 10, 2));// передаем в функцию парамерты которые необходимо ранжировать
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object_2</title>
+</head>
+<body>
+<script>
+    var key;    // обьявляем обьекты которые будет сравнивать
+    var a = {
+        name:       'John',
+        lastname:   'Doe',
+        age:        76
+    };
+    var b = {
+        name:       'John',
+        lastname:   'Doe',
+        age:        76
+    };
+
+    deepEqual(a,b); // передаем в функцию. что будем сравнивать
+    function deepEqual(){ // функция сравнения
+        for ( key in a){//првоеряем все значения обьекта
+            if (a[key]!== b[key]) // если обьект ключ a не =  обьект ключ b
+                console.log(false); // false
+        }
+        for (key in b){// првоеряем все значения обьекта
+            if(a[key] !==b[key])//если обьект ключ a не =  обьект ключ b
+                console.log(false);//
+        }
+        console.log(true);// иначе правда
+    }
+</script>
+</body>
+</html>

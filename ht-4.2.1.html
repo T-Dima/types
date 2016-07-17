@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sumArray</title>
+</head>
+<body>
+<script>
+    function sumArray(array){//функция суммирования указанных данных
+        var sum = 0;// обьявляем переменную и присваиваем ее к 0
+        for (var i = 0; i<array.length; i++){//проходимся по массиву циклом
+            sum+=array[i]; //слаживаем то что пришло в функцию
+        }
+        console.log(sum);//показываем результат работы функции
+    }
+    sumArray([10,20,20]);// передаем в функцию, то что нужно сложить
+</script>
+</body>
+</html>

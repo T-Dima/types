@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeOfArray</title>
+</head>
+<body>
+<script>
+var x_string = 0; //обьявляем переменные
+var x_boolean = 0;
+var x_number = 0;
+var x_undefined = 0;
+var x_null = 0;
+var x_object = 0;
+
+    var arr = [1, 'cell','vocation',{},{}, true]; //обьявляем массив типов данных
+    for(var i = 0; i<arr.length; i++){// перебираем все данные массива
+        console.log(i + ': ' + arr[i] );//показываем что перебрали из массива
+      switch (typeof (arr[i])){ // свитчем проходимся по массиву и прибавляем если есть одинаковые типы еденицу
+          case 'boolean': x_boolean++; break;//случаи
+          case 'string':x_string++;break;
+          case 'number':x_number++;break;
+          case 'object':x_object++; break;
+          case 'null':x_null++;break;
+          case 'undefined':x_undefined++;break;
+      }
+    }
+
+console.log("булевских значений: " + x_boolean );//показываем все что насчитали
+console.log("строковых значений: " + x_string);
+console.log("числовых значений: " + x_number);
+console.log("объектов: " + x_object);
+console.log("null: " + x_null);
+console.log("undefined: " + x_undefined);
+
+</script>
+</body>
+</html>

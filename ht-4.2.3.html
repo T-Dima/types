@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reverseArray</title>
+</head>
+<body>
+<script>
+    function reverseArray (array){//функция реверсирвоания указанных данных
+        var  sorted = array.sort(function(one, two){// сортируем и применяем функцию перестановки местами
+            return two - one;//возвращаем то что нужно поменять местами
+        });
+        console.log(sorted);// показываем результат работы в консоли
+    }
+    reverseArray([100,200,45,90,1]);// передаем в функцию, то что нужно реверсить
+</script>
+</body>
+</html>
