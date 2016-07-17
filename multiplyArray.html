@@ -7,13 +7,16 @@
 <body>
 <script>
     function multiplyArray(array){//функция перемножения указанных данных
-        var mlp = 1;// обьявляем переменную и присваиваем ее к 1 так как умножение
+        var multiplying = 1;// обьявляем переменную и присваиваем ее к 1 так как умножение
         for (var i = 0; i<array.length; i++){//проходимся по массиву циклом
-            mlp *=  array[i] ;//перемножаем то что пришло в функцию
+            multiplying *=  array[i] ;//перемножаем то что пришло в функцию
         }
-        console.log(mlp);//показываем результат работы функции
+        console.log(multiplying);//показываем результат работы функции
     }
-    multiplyArray([2,3,4]);// передаем в функцию, то что нужно сложить
+    multiplyArray([2,3,4]);// передаем в функцию, то что нужно перемножить
+
+    multiplyArray.call(null,[2,3,4]);
+    multiplyArray.apply(null,[[2,3,4]]);
 </script>
 </body>
 </html>
